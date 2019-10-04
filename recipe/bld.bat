@@ -1,3 +1,5 @@
+echo on
+
 mkdir build
 cd build
 
@@ -15,7 +17,7 @@ cmake -G "Ninja" ^
     -DLLVM_INCLUDE_TESTS=OFF ^
     -DLLVM_INCLUDE_UTILS=ON ^
     -DLLVM_INSTALL_UTILS=ON ^
-    -DLLVM_UTILS_INSTALL_DIR=%SRC_DIR%\install-utils ^
+    -DLLVM_UTILS_INSTALL_DIR=libexec\llvm ^
     -DLLVM_INCLUDE_DOCS=OFF ^
     -DLLVM_ENABLE_RTTI=ON ^
     -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly ^
@@ -33,5 +35,5 @@ if errorlevel 1 exit 1
 bin\opt -S -vector-library=SVML -mcpu=haswell -O3 %RECIPE_DIR%\numba-3016.ll | bin\FileCheck %RECIPE_DIR%\numba-3016.ll
 if errorlevel 1 exit 1
 
-rem cd ..\test
-rem ..\build\bin\llvm-lit -vv Transforms ExecutionEngine Analysis CodeGen/X86
+cd ..\test
+..\build\bin\llvm-lit -vv Transforms ExecutionEngine Analysis CodeGen/X86

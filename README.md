@@ -3,7 +3,7 @@ About llvm-package
 
 Home: http://llvm.org/
 
-Package license: NCSA
+Package license: LLVM-Exception
 
 Feedstock license: BSD 3-Clause
 
@@ -43,10 +43,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_cxx_compilervs2015vc14</td>
+              <td>win_target_platformwin-64vc14</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=69&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=win&configuration=win_cxx_compilervs2015vc14" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=win&configuration=win_target_platformwin-64vc14" alt="variant">
                 </a>
               </td>
             </tr>
@@ -68,11 +68,10 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libllvm8-green.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libllvm9-green.svg)](https://anaconda.org/nsls2forge/libllvm9) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/libllvm9.svg)](https://anaconda.org/nsls2forge/libllvm9) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/libllvm9.svg)](https://anaconda.org/nsls2forge/libllvm9) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/libllvm9.svg)](https://anaconda.org/nsls2forge/libllvm9) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lit-green.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-llvm-green.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-llvm--tools-green.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-llvm--utils-green.svg)](https://anaconda.org/nsls2forge/llvm-utils) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvm-utils.svg)](https://anaconda.org/nsls2forge/llvm-utils) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvm-utils.svg)](https://anaconda.org/nsls2forge/llvm-utils) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvm-utils.svg)](https://anaconda.org/nsls2forge/llvm-utils) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-llvmdev-green.svg)](https://anaconda.org/nsls2forge/llvmdev) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvmdev.svg)](https://anaconda.org/nsls2forge/llvmdev) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvmdev.svg)](https://anaconda.org/nsls2forge/llvmdev) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvmdev.svg)](https://anaconda.org/nsls2forge/llvmdev) |
 
 Installing llvm-package
@@ -84,16 +83,16 @@ Installing `llvm-package` from the `nsls2forge` channel can be achieved by addin
 conda config --add channels nsls2forge
 ```
 
-Once the `nsls2forge` channel has been enabled, `libllvm8, lit, llvm, llvm-tools, llvm-utils, llvmdev` can be installed with:
+Once the `nsls2forge` channel has been enabled, `libllvm9, lit, llvm, llvm-tools, llvmdev` can be installed with:
 
 ```
-conda install libllvm8 lit llvm llvm-tools llvm-utils llvmdev
+conda install libllvm9 lit llvm llvm-tools llvmdev
 ```
 
-It is possible to list all of the versions of `libllvm8` available on your platform with:
+It is possible to list all of the versions of `libllvm9` available on your platform with:
 
 ```
-conda search libllvm8 --channel nsls2forge
+conda search libllvm9 --channel nsls2forge
 ```
 
 

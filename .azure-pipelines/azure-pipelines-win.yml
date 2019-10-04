@@ -10,8 +10,8 @@ jobs:
   strategy:
     maxParallel: 4
     matrix:
-      win_cxx_compilervs2015vc14:
-        CONFIG: win_cxx_compilervs2015vc14
+      win_target_platformwin-64vc14:
+        CONFIG: win_target_platformwin-64vc14
         CONDA_BLD_PATH: D:\\bld\\
         UPLOAD_PACKAGES: True
   steps:
@@ -98,6 +98,7 @@ jobs:
         set "GIT_BRANCH=%BUILD_SOURCEBRANCHNAME%"
         set "UPLOAD_ON_BRANCH=master"
         upload_package .\ .\recipe .ci_support\%CONFIG%.yaml
+      displayName: Upload package
       env:
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
       condition: not(eq(variables['UPLOAD_PACKAGES'], 'False'))
