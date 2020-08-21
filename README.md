@@ -5,7 +5,7 @@ Home: http://llvm.org/
 
 Package license: NCSA
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Development headers and libraries for LLVM
 
@@ -29,36 +29,30 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=69&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=69&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_cxx_compilervs2015vc14</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=69&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=win&configuration=win_cxx_compilervs2015vc14" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/llvm-package-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -68,7 +62,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libllvm8-green.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/libllvm8.svg)](https://anaconda.org/nsls2forge/libllvm8) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libllvm10-green.svg)](https://anaconda.org/nsls2forge/libllvm10) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/libllvm10.svg)](https://anaconda.org/nsls2forge/libllvm10) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/libllvm10.svg)](https://anaconda.org/nsls2forge/libllvm10) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/libllvm10.svg)](https://anaconda.org/nsls2forge/libllvm10) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lit-green.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/lit.svg)](https://anaconda.org/nsls2forge/lit) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-llvm-green.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvm.svg)](https://anaconda.org/nsls2forge/llvm) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-llvm--tools-green.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Downloads](https://img.shields.io/conda/dn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Version](https://img.shields.io/conda/vn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) | [![Conda Platforms](https://img.shields.io/conda/pn/nsls2forge/llvm-tools.svg)](https://anaconda.org/nsls2forge/llvm-tools) |
@@ -84,16 +78,16 @@ Installing `llvm-package` from the `nsls2forge` channel can be achieved by addin
 conda config --add channels nsls2forge
 ```
 
-Once the `nsls2forge` channel has been enabled, `libllvm8, lit, llvm, llvm-tools, llvm-utils, llvmdev` can be installed with:
+Once the `nsls2forge` channel has been enabled, `libllvm10, lit, llvm, llvm-tools, llvm-utils, llvmdev` can be installed with:
 
 ```
-conda install libllvm8 lit llvm llvm-tools llvm-utils llvmdev
+conda install libllvm10 lit llvm llvm-tools llvm-utils llvmdev
 ```
 
-It is possible to list all of the versions of `libllvm8` available on your platform with:
+It is possible to list all of the versions of `libllvm10` available on your platform with:
 
 ```
-conda search libllvm8 --channel nsls2forge
+conda search libllvm10 --channel nsls2forge
 ```
 
 
